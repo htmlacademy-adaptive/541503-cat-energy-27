@@ -1,0 +1,48 @@
+@use "fonts.scss";
+
+$main-font: "Lato", "Arial", sans-serif;
+$title-font: "Oswald", "Arial", sans-serif;
+
+$font-s: 12px;
+$font-m: 14px;
+$font-l: 16px;
+$font-ll: 20px;
+$font-mobile-xl: 24px;
+$font-desktop-xl: 36px;
+$font-mobile-xxl: 36px;
+$font-desktop-xxl: 36px;
+$font-xxxl: 60px;
+
+$line-height-xxs: 12px;
+$line-height-xs: 14px;
+$line-height-s: 16px;
+$line-height-m: 18px;
+$line-height-ml: 20px;
+$line-height-l: 24px;
+$line-height-ll: 26px;
+$line-height-lll: 30px;
+$line-height-desktop-xl: 36px;
+$line-height-desktop-xxl: 36px;
+$line-height-mobile-xl: 37px;
+$line-height-mobile-xxl: 40px;
+$line-height-xxxl: 60px;
+
+$normal: 400;
+
+$color-basic-white: #ffffff;
+$color-basic-black: #000000;
+$color-basic-green: #68b738;
+$color-basic-green-hover: #5eaa2f;
+$color-basic-grey: #f2f2f2;
+$color-alternative-black: #111111;
+$color-basic-darkgrey: #666666;
+$color-special-grey: #cdcdcd;
+$color-special-darkgrey: #444444;
+$color-special-darkgrey-alternative: #222222;
+$color-input: #e7e7e7;
+$color-status-error: #ff8282;
+
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$tablet-width-only: 1439px;
+$device-width: 1440px;

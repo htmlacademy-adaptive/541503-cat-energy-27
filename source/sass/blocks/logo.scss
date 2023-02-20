@@ -1,0 +1,19 @@
+@use "../global/variables.scss" as var;
+
+.logo--mobile {
+  display: block;
+  max-width: 256px;
+  min-height: 38px;
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:active {
+  opacity: 0.6;
+}
