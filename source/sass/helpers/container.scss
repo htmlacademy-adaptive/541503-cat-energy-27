@@ -10,8 +10,13 @@
     width: calc(100% - (2 * 30px));
   }
 
-  @media (min-width: var.$device-width) {
+  @media (min-width: var.$desktop-width) {
     padding: 0 110px;
     width: calc(1440px - (2 * 110px));
   }
+}
+
+.container-large {
+  margin: 0 auto;
+  width: 1440px;
 }

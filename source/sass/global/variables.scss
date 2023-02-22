@@ -5,7 +5,8 @@ $title-font: "Oswald", "Arial", sans-serif;
 
 $font-s: 12px;
 $font-m: 14px;
-$font-l: 16px;
+$font-ml: 16px;
+$font-l: 18px;
 $font-ll: 20px;
 $font-mobile-xl: 24px;
 $font-desktop-xl: 36px;
@@ -28,6 +29,7 @@ $line-height-mobile-xxl: 40px;
 $line-height-xxxl: 60px;
 
 $normal: 400;
+$medium: 500;
 
 $color-basic-white: #ffffff;
 $color-basic-black: #000000;
@@ -45,4 +47,4 @@ $color-status-error: #ff8282;
 $mobile-width-only: 767px;
 $tablet-width: 768px;
 $tablet-width-only: 1439px;
-$device-width: 1440px;
+$desktop-width: 1440px;

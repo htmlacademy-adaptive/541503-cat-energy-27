@@ -1,0 +1,47 @@
+@use "../global/variables.scss" as var;
+
+.page-header-toggle {
+  margin: 0 0 10px;
+  padding: 8px 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.page-header-toggle__burger {
+  display: block;
+  width: 24px;
+  height: 2px;
+
+  background-color: var.$color-basic-black;
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
+}
+
+.page-header-toggle__burger::before {
+  content: "";
+
+  display: block;
+  width: 24px;
+  height: 2px;
+
+  background-color: var.$color-basic-black;
+
+  transform: translateY(-7px);
+}
+
+.page-header-toggle__burger::after {
+  content: "";
+
+  display: block;
+  width: 24px;
+  height: 2px;
+
+  background-color: var.$color-basic-black;
+
+  transform: translateY(5px);
+}

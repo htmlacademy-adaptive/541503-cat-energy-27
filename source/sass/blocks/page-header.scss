@@ -1,0 +1,18 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.page-header__main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media (max-width: var.$mobile-width-only) {
+    padding: 10px 0 18px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-top: 53px;
+  }
+}

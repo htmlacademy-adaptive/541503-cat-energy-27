@@ -1,0 +1,36 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.site-menu {
+  margin-left: auto;
+
+  @include mixin.list-reset;
+
+  @media (max-width: var.$mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 35px;
+    max-width: 460px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    gap: 34px;
+    max-width: 720px;
+  }
+}
+
+.site-menu__link {
+  @include mixin.font-site-menu;
+
+  padding: 8px 0;
+}
+
+.site-menu__link--current {
+
+}
