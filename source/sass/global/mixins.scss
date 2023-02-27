@@ -10,9 +10,8 @@
   color: var.$color-special-darkgrey;
 
   @media (min-width: var.$tablet-width) {
-    font-size: var.$font-l;
+    font-size: var.$font-ml;
     line-height: var.$line-height-l;
-    color: var.$color-basic-black;
   }
 }
 
@@ -56,7 +55,7 @@
   }
 }
 
-@mixin font-main-lead {
+@mixin font-promo-text {
   margin: 0;
 
   font-family: "Oswald", Arial, sans-serif;
@@ -74,23 +73,30 @@
   }
 }
 
-@mixin font-example-term {
+@mixin font-to-catalog-link {
   margin: 0;
 
   font-family: "Oswald", Arial, sans-serif;
-  font-size: var.$font-mobile-xl;
-  line-height: var.$line-height-l;
+  font-size: var.$font-ml;
+  line-height: var.$line-height-s;
   text-transform: uppercase;
-  text-align: center;
   color: var.$color-basic-black;
 
   @media (min-width: var.$tablet-width) {
-    font-size: 30px;
-    line-height: 37px;
+    font-size: var.$font-ll;
+    line-height: var.$line-height-lll;
   }
 }
 
-@mixin font-example-definition {
+@mixin font-advantages-counter {
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: var.$font-advantages-number;
+  line-height: var.$line-height-advantages-number;
+  text-align: center;
+  color: var.$color-basic-grey;
+}
+
+@mixin font-example-term {
   margin: 0;
 
   font-family: "Lato", Arial, sans-serif;
@@ -106,12 +112,29 @@
   }
 }
 
+@mixin font-example-definition {
+  margin: 0;
+
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: var.$font-mobile-xl;
+  line-height: var.$line-height-l;
+  text-transform: uppercase;
+  text-align: center;
+  color: var.$color-basic-black;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
 @mixin font-example-price {
   margin: 0;
 
   font-family: "Oswald", Arial, sans-serif;
   font-size: var.$font-m;
   line-height: var.$line-height-ml;
+  text-transform: uppercase;
   color: var.$color-basic-black;
 
   @media (min-width: var.$tablet-width) {
@@ -125,6 +148,7 @@
   font-family: "Oswald", Arial, sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-ml;
+  text-transform: uppercase;
   color: var.$color-alternative-black;
 
   @media (min-width: var.$tablet-width) {
@@ -143,6 +167,13 @@
   @media (min-width: var.$tablet-width) {
     font-size: var.$font-l;
   }
+}
+
+@mixin font-academy-link {
+  font-family: "Lato", Arial, sans-serif;
+  font-size: var.$font-ml;
+  line-height: var.$line-height-ml;
+  color: var.$color-special-darkgrey;
 }
 
 @mixin font-catalog-small {

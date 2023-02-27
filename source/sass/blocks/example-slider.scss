@@ -1,0 +1,95 @@
+@use "../global/variables.scss" as var;
+
+.example-slider {
+  position: relative;
+
+  width: 100%;
+  height: auto;
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    padding: 0 74px;
+  }
+}
+
+.example-slider__before {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.example-slider__after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    padding: 0 74px;
+  }
+
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.example-slider__button {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+
+  padding: 0;
+  display: block;
+  width: 4px;
+  height: 100%;
+  background-color: var.$color-basic-darkgrey;
+
+  border: none;
+
+  transform: translateX(-50%);
+}
+
+.example-slider__button-pointer {
+  position: absolute;
+  top: 50%;
+  left: -18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  background-color: var.$color-basic-white;
+  border: 2px solid var.$color-basic-darkgrey;
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+}
+
+.example-slider__button-image {
+  color: var.$color-basic-darkgrey;
+}
+
+.example-slider__button:hover,
+.example-slider__button:focus {
+  background-color: var.$color-basic-green;
+}
+
+.example-slider__button:hover .example-slider__button-pointer,
+.example-slider__button:focus .example-slider__button-pointer {
+  border-color: var.$color-basic-green;
+}
+
+.example-slider__button:hover .example-slider__button-image,
+.example-slider__button:focus .example-slider__button-image {
+  color: var.$color-basic-green;
+}
+
+.example-slider__button:active {
+  background-color: var.$color-basic-green-hover;
+}
+
+.example-slider__button:active .example-slider__button-pointer {
+  border-color: var.$color-basic-green-hover;
+}
+
+.example-slider__button:active .example-slider__button-image {
+  color: var.$color-basic-green-hover;
+}

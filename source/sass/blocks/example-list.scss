@@ -1,0 +1,75 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.example-list {
+  @include mixin.list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+
+  @media (max-width: var.$mobile-width-only) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 410px;
+  }
+}
+
+.example-list__item {
+  position: relative;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 42px 0 0;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.example-list__term {
+  padding-left: 4px;
+  padding-right: 6px;
+
+  @media (max-width: var.$mobile-width-only) {
+    margin: 0 0 8px;
+    max-width: 87px;
+  }
+
+  @include mixin.font-example-term;
+
+  @media (min-width: var.$tablet-width) {
+    padding-left: 8px;
+    padding-right: 9px;
+  }
+
+  background-color: var.$color-basic-background-grey;
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    background-color: var.$color-basic-white;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 43px;
+  }
+
+  transform: translateY(-50%);
+}
+
+.example-list__definition {
+  order: -1;
+  margin: 0;
+  padding: 15px 20px 18px;
+  width: 124px;
+
+  @include mixin.font-example-definition;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 15px 20px 20px;
+    width: 162px;
+  }
+
+  border: 1px solid var.$color-special-grey;
+}

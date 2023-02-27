@@ -1,0 +1,45 @@
+@use "../global/variables.scss" as var;
+
+.program-form-group {
+  padding: 0 20px 24px;
+
+  border: none;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 0 70px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.program-form-group--radio {
+  padding: 22px 0 19px;
+
+  @media (max-width: var.$mobile-width-only) {
+    border-top: 1px solid var.$color-programs-list-border-grey;
+    border-bottom: 1px solid var.$color-programs-list-border-grey;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    padding: 25px 67px 25px 70px;
+
+    border: 1px solid var.$color-input;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 25px 110px 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.program-form-group__box {
+  display: flex;
+  flex-wrap: wrap;
+}

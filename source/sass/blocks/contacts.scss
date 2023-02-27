@@ -1,0 +1,62 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.contacts {
+  position: relative;
+}
+
+.contacts__text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 20px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 56px 70px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    position: absolute;
+    left: 110px;
+    top: 95px;
+
+    width: 565px;
+
+    background-color: var.$color-basic-white;
+  }
+}
+
+.contacts__lead {
+  width: 138px;
+
+  @include mixin.font-contacts-lead;
+
+  @media (min-width: var.$tablet-width) {
+    width: 165px;
+  }
+}
+
+.contacts__address {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+
+  @include mixin.font-address;
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    text-align: right;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    row-gap: 19px;
+    width: 180px;
+  }
+}
+
+.contacts__map-link {
+  display: block;
+  width: 100%;
+  height: auto;
+}

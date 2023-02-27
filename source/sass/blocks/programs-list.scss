@@ -1,0 +1,178 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.programs-list {
+  @include mixin.list-reset;
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: var.$tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+}
+
+.programs-list__item {
+  position: relative;
+  padding: 24px 20px 18px;
+
+  background-color: var.$color-basic-grey;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 77px 316px 53px 52px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 47px 61px 55px 52px;
+  }
+}
+
+.programs-list__item-header {
+  margin: 0 0 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 24px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 40px;
+  }
+}
+
+.programs-list__decor {
+  position: relative;
+
+  @media (max-width: var.$mobile-width-only) {
+    margin: 0 19px 0 0;
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    position: absolute;
+    right: 62px;
+    top: 92px;
+
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 62px 0 0;
+    width: 100px;
+    height: 100px;
+  }
+
+  background-color: var.$color-basic-green;
+  border-radius: 50%;
+}
+
+.programs-list__decor-image--slim {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (max-width: var.$mobile-width-only) {
+    left: 7px;
+    top: -3px;
+
+    width: 36px;
+    height: 50px;
+
+    background-image: url("../../img/cat-slim-mobile.svg");
+    background-size: 36px 50px;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    left: 30px;
+    top: -11px;
+
+    width: 140px;
+    height: 194px;
+
+    background-image: url("../../img/cat-slim-tablet.svg");
+    background-size: 140px 194px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    left: 17px;
+    top: -6px;
+
+    width: 70px;
+    height: 97px;
+
+    background-image: url("../../img/cat-slim-desktop.svg");
+    background-size: 70px 97px;
+  }
+}
+
+.programs-list__decor-image--pro {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (max-width: var.$mobile-width-only) {
+    left: -9px;
+    top: 11px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../../img/cat-strong-mobile.svg");
+    background-size: 67px 28px;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    left: -34px;
+    top: 44px;
+
+    width: 268px;
+    height: 112px;
+
+    background-image: url("../../img/cat-strong-tablet.svg");
+    background-size: 268px 112px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    left: -19px;
+    top: 20px;
+
+    width: 134px;
+    height: 56px;
+
+    background-image: url("../../img/cat-strong-desktop.svg");
+    background-size: 134px 56px;
+  }
+}
+
+.programs-list__item-title {
+  @include mixin.font-subtitle-main;
+}
+
+.programs-list__text {
+  @include mixin.font-main-text;
+
+  @media (max-width: var.$mobile-width-only) {
+    margin: 0 0 15px;
+    padding: 0 0 23px;
+    border-bottom: 1px solid var.$color-programs-list-border-grey;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 48px;
+
+    color: var.$color-basic-black;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 23px;
+  }
+}

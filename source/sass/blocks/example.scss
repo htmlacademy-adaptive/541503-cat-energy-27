@@ -1,0 +1,103 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.example {
+  display: grid;
+  grid-template-rows: min-content min-content;
+
+  @media (max-width: var.$mobile-width-only) {
+    padding-top: 25px;
+    padding-bottom: 40px;
+
+    background-color: var.$color-basic-background-grey;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 101px;
+  }
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    background-image: linear-gradient(to bottom, var.$color-basic-white 0%, var.$color-basic-white 640px, var.$color-basic-background-grey 640px, var.$color-basic-background-grey 100%);
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 75px;
+
+    grid-template-columns: 436px 1fr;
+    column-gap: 224px;
+
+    background-image: linear-gradient(to bottom, var.$color-basic-white 0%, var.$color-basic-white 196px, var.$color-basic-background-grey 196px, var.$color-basic-background-grey 100%);
+  }
+}
+
+.example__title {
+  @include mixin.font-title-large;
+
+  margin: 0 0 40px;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 63px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 146px;
+  }
+}
+
+.example__text {
+  @include mixin.font-main-text;
+  margin: 0 0 20px;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 54px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 69px;
+  }
+}
+
+.example__statistics {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    margin: 0 0 91px;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.example__price {
+  @include mixin.font-example-price;
+
+  @media (max-width: var.$mobile-width-only) {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    margin: -9px 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+}
+
+.example__price-term {
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    margin: 0 0 9px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 63px 0 0;
+  }
+}

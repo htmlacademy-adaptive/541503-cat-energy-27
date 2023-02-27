@@ -1,0 +1,16 @@
+@use "../global/variables.scss" as var;
+
+.program-form__fieldsets-wrapper {
+  padding: 0;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 67px 0 70px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0 110px 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+}

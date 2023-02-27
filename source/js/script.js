@@ -1,13 +1,13 @@
-﻿const mainNav = document.querySelector('.main-nav');
+﻿const mainNav = document.querySelector('.page-header__main-nav');
 
-mainNav.classList.remove('main-nav--open');
+mainNav.classList.remove('page-header__main-nav--opened');
 
-const mainNavToggle = document.querySelector('.main-nav-toggle');
+const pageHeaderToggle = document.querySelector('.page-header-toggle');
 
-mainNavToggle.onclick = function () {
-  if (mainNav.classList.contains('main-nav--open')) {
-    mainNav.classList.remove('main-nav--open');
+pageHeaderToggle.onclick = function () {
+  if (mainNav.classList.contains('page-header__main-nav--opened')) {
+    mainNav.classList.remove('page-header__main-nav--opened');
   } else {
-    mainNav.classList.add('main-nav--open');
+    mainNav.classList.add('page-header__main-nav--opened');
   }
 };
