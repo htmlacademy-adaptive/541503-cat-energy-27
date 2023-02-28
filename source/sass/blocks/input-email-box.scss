@@ -1,0 +1,52 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.input-email-box {
+  position: relative;
+
+  padding: 0 0 14px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 0 20px;
+  }
+}
+
+.input-email-box__label {
+  max-width: calc(50% - 10px);
+
+  @include mixin.font-input;
+
+  margin: 0 10px 0 0;
+
+  @media (min-width: var.$tablet-width) {
+    max-width: calc(50% - 20px);
+
+    margin: 0 20px 0 0;
+  }
+}
+
+.input-email-box__icon {
+  position: absolute;
+  right: 17px;
+  bottom: 30px;
+
+  color: var.$color-special-darkgrey-alternative;
+
+  @media (min-width: var.$tablet-width) {
+    right: 20px;
+    bottom: 40px;
+  }
+}
+
+.input-email-box__input-email:focus + .input-email-box__icon {
+  color: var.$color-basic-green;
+}
+
+.input-email-box__input-email:disabled + .input-email-box__icon {
+  opacity: 0.3;
+}
+
+.input-email-box__input-email.is-error + .input-email-box__icon {
+  color: var.$color-status-error;
+}

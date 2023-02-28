@@ -33,19 +33,24 @@
   padding-left: 4px;
   padding-right: 6px;
 
+  background-color: var.$color-basic-background-grey;
+
+  transform: translateY(-12px);
+
+  @include mixin.font-example-term;
+
   @media (max-width: var.$mobile-width-only) {
     margin: 0 0 8px;
     max-width: 87px;
   }
 
-  @include mixin.font-example-term;
-
   @media (min-width: var.$tablet-width) {
     padding-left: 8px;
     padding-right: 9px;
-  }
+    max-width: 142px;
 
-  background-color: var.$color-basic-background-grey;
+    transform: translateY(-7px);
+  }
 
   @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
     background-color: var.$color-basic-white;
@@ -53,9 +58,8 @@
 
   @media (min-width: var.$desktop-width) {
     margin: 0 0 43px;
+    max-width: 150px;
   }
-
-  transform: translateY(-50%);
 }
 
 .example-list__definition {

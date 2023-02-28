@@ -18,6 +18,16 @@
   border: none;
 }
 
+.button--limited-size-l {
+  @media (min-width: var.$tablet-width) {
+    width: 282px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    width: 568px;
+  }
+}
+
 .button:hover,
 .button:focus {
   background-color: var.$color-basic-green-hover;
@@ -26,4 +36,10 @@
 .button:active {
   background-color: var.$color-basic-green-hover;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.button.disabled {
+  background-color: var.$color-basic-green-hover;
+
+  opacity: 0.5;
 }

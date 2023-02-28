@@ -102,6 +102,11 @@
 }
 
 .promo__button {
+  @media (max-width: var.$mobile-width-only) {
+    font-size: var.$font-m;
+    line-height: var.$line-height-m;
+  }
+
   @media (min-width: var.$tablet-width) {
     width: 244px;
   }

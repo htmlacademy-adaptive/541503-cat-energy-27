@@ -1,0 +1,37 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.input-email {
+  padding: 14px 50px 13px 15px;
+  flex-grow: 1;
+
+  @include mixin.font-input;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 11px 60px 11px 20px;
+  }
+
+  border: 1px solid var.$color-input;
+}
+
+.input-email:hover {
+  border: 1px solid var.$color-special-grey;
+}
+
+.input-email:focus {
+  border: 1px solid var.$color-special-darkgrey;
+  outline: 1px solid var.$color-special-darkgrey;
+}
+
+.input-email:disabled {
+  opacity: 0.5;
+  border: 1px solid var.$color-input;
+  outline: none;
+}
+
+/*Для отображения ошибки соответствующему элементу input добавить класс "is-error"*/
+.input-email.is-error {
+  border: 1px solid var.$color-status-error;
+  outline: 1px solid var.$color-status-error;
+}

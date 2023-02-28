@@ -28,6 +28,12 @@
   }
 }
 
+.page--inner .contacts__text {
+  @media (max-width: var.$tablet-width-only) {
+    background-color: var.$color-basic-grey;
+  }
+}
+
 .contacts__lead {
   width: 138px;
 

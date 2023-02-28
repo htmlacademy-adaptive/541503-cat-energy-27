@@ -1,0 +1,35 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.input-number {
+  padding: 14px 20px 13px;
+  flex-grow: 1;
+
+  @include mixin.font-input;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 11px 20px;
+  }
+
+  border: 1px solid var.$color-input;
+}
+
+.input-number:hover {
+  border: 1px solid var.$color-special-grey;
+}
+
+.input-number:focus {
+  outline: none;
+  border: 1px solid var.$color-special-darkgrey;
+}
+
+.input-number:disabled {
+  opacity: 0.5;
+  border: 1px solid var.$color-input;
+}
+
+/*Для отображения ошибки соответствующему элементу input добавить класс "is-error"*/
+.input-number.is-error {
+  border: 1px solid var.$color-status-error;
+}

@@ -85,7 +85,7 @@
   }
 
   @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
-    margin: -9px 0 0;
+    margin: 0 0 9px;
     display: flex;
     flex-direction: column;
     text-align: right;

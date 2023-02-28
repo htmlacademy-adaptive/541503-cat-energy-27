@@ -35,3 +35,8 @@
   background-image: url("../../img/arrow-right-black-long.svg");
   background-size: 32px 12px;
 }
+
+.to-catalog-link:active,
+.to-catalog-link:active::after {
+  opacity: 0.3;
+}

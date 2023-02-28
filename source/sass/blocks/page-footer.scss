@@ -5,8 +5,6 @@
 .page-footer {
   padding-top: 40px;
   padding-bottom: 40px;
-  display: flex;
-  flex-direction: column;
 
   @media (min-width: var.$tablet-width) {
     padding-top: 57px;
@@ -20,6 +18,20 @@
   @media (min-width: var.$desktop-width) {
     padding-top: 68px;
     padding-bottom: 68px;
+  }
+
+  background-color: var.$color-basic-grey;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: var.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
