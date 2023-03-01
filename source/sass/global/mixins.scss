@@ -158,6 +158,8 @@
 }
 
 @mixin font-address {
+  margin: 0;
+
   font-family: "Lato", Arial, sans-serif;
   font-size: var.$font-m;
   line-height: var.$line-height-ml;
@@ -170,6 +172,8 @@
 }
 
 @mixin font-academy-link {
+  margin: 0;
+
   font-family: "Lato", Arial, sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-ml;
@@ -177,13 +181,15 @@
 }
 
 @mixin font-catalog-small {
+  margin: 0;
+
   font-family: "Lato", Arial, sans-serif;
   font-size: var.$font-s;
   line-height: var.$line-height-s;
   color: var.$color-basic-darkgrey;
 
   @media (min-width: var.$tablet-width) {
-    font-size: var.$font-l;
+    font-size: var.$font-ml;
   }
 }
 

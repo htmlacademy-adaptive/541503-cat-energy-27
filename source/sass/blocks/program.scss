@@ -22,6 +22,10 @@
 
   @include mixin.font-title-large;
 
+  @media (max-width: var.$mobile-width-only) {
+    line-height: var.$line-height-desktop-xxl;
+  }
+
   margin: 0 0 37px;
 
   @media (min-width: var.$tablet-width) {

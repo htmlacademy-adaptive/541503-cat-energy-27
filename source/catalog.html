@@ -46,11 +46,13 @@
     </header>
     <main>
       <section class="catalog-main-content">
-        <h1 class="catalog-main-content__title">Каталог продукции</h1>
+        <div class="catalog-main-content__header">
+          <h1 class="catalog-main-content__title">Каталог продукции</h1>
+        </div>
         <h2 class="visually-hidden">Основная продукция</h2>
         <ul class="catalog-main-content__list catalog-list">
           <li class="catalog-list__item catalog-item">
-            <a class="catalog-item__image-link" href="#">
+            <a class="catalog-item__image-link catalog-item__image-link--chicken-small" href="#">
               <div class="catalog-item__image-wrapper">
                 <picture>
                   <source media=" (min-width: 768px) " srcset="img/feed-chicken-small-desktop.png 1x, img/feed-chicken-small-desktop@2x.png 2x">
@@ -76,10 +78,10 @@
                   <dd class="catalog-item__description-definition">700&nbsp;&#8381;</dd>
                 </div>
               </dl>
-              <a class="catalog-item__button button" href="#">Заказать</a>
             </div>
+            <a class="catalog-item__button button" href="#">Заказать</a>
           </li>
-          <li class="catalog-list__item catalog-item">
+          <li class="catalog-list__item catalog-item catalog-item--large">
             <a class="catalog-item__image-link" href="#">
               <div class="catalog-item__image-wrapper">
                 <picture>
@@ -106,11 +108,11 @@
                   <dd class="catalog-item__description-definition">1000&nbsp;&#8381;</dd>
                 </div>
               </dl>
-              <a class="catalog-item__button button" href="#">Заказать</a>
             </div>
+            <a class="catalog-item__button button" href="#">Заказать</a>
           </li>
           <li class="catalog-list__item catalog-item">
-            <a class="catalog-item__image-link" href="#">
+            <a class="catalog-item__image-link catalog-item__image-link--fish-small" href="#">
               <div class="catalog-item__image-wrapper">
                 <picture>
                   <source media=" (min-width: 768px) " srcset="img/feed-fish-small-desktop.png 1x, img/feed-fish-small-desktop@2x.png 2x">
@@ -136,10 +138,10 @@
                   <dd class="catalog-item__description-definition">700&nbsp;&#8381;</dd>
                 </div>
               </dl>
-              <a class="catalog-item__button button" href="#">Заказать</a>
             </div>
+            <a class="catalog-item__button button" href="#">Заказать</a>
           </li>
-          <li class="catalog-list__item catalog-item">
+          <li class="catalog-list__item catalog-item catalog-item--large">
             <a class="catalog-item__image-link" href="#">
               <div class="catalog-item__image-wrapper">
                 <picture>
@@ -166,8 +168,8 @@
                   <dd class="catalog-item__description-definition">1000&nbsp;&#8381;</dd>
                 </div>
               </dl>
-              <a class="catalog-item__button button" href="#">Заказать</a>
             </div>
+            <a class="catalog-item__button button" href="#">Заказать</a>
           </li>
           <li class="catalog-list__item catalog-item">
             <a class="catalog-item__image-link" href="#">
@@ -196,10 +198,10 @@
                   <dd class="catalog-item__description-definition">400&nbsp;&#8381;</dd>
                 </div>
               </dl>
-              <a class="catalog-item__button button" href="#">Заказать</a>
             </div>
+            <a class="catalog-item__button button" href="#">Заказать</a>
           </li>
-          <li class="catalog-list__item catalog-item">
+          <li class="catalog-list__item catalog-item catalog-item--large">
             <a class="catalog-item__image-link" href="#">
               <div class="catalog-item__image-wrapper">
                 <picture>
@@ -226,8 +228,8 @@
                   <dd class="catalog-item__description-definition">700&nbsp;&#8381;</dd>
                 </div>
               </dl>
-              <a class="catalog-item__button button" href="#">Заказать</a>
             </div>
+            <a class="catalog-item__button button" href="#">Заказать</a>
           </li>
           <li class="catalog-list__item catalog-item">
             <a class="catalog-item__image-link" href="#">
@@ -256,8 +258,8 @@
                   <dd class="catalog-item__description-definition">500&nbsp;&#8381;</dd>
                 </div>
               </dl>
-              <a class="catalog-item__button button" href="#">Заказать</a>
             </div>
+            <a class="catalog-item__button button" href="#">Заказать</a>
           </li>
           <li class="catalog-list__item catalog-item catalog-item--more">
             <a class="catalog-item__more-link" href="#">
@@ -269,43 +271,45 @@
         </ul>
       </section>
       <section class="catalog-additional-items">
-        <h2 class="catalog-additional-items__title">Дополнительные товары</h2>
-        <ul class="catalog-additional-items__list additional-items-list">
-          <li class="additional-items-list__item">
-            <h3 class="additional-items-list__item-title">Сахарозаменитель</h3>
-            <dl class="additional-items-list__item-description-list">
-              <dt class="additional-items-list__item-description-term">1&nbsp;упаковка (100&nbsp;г)</dt>
-              <dd class="additional-items-list__item-description-definition">200&nbsp;&#8381;</dd>
-            </dl>
-            <a class="catalog-additional-items__button button button--limited-size-m" href="#">Заказать</a>
-          </li>
-          <li class="additional-items-list__item">
-            <h3 class="additional-items-list__item-title">Питьевая вода</h3>
-            <dl class="additional-items-list__item-description-list">
-              <dt class="additional-items-list__item-description-term">5&nbsp;литров</dt>
-              <dd class="additional-items-list__item-description-definition">50&nbsp;&#8381;</dd>
-            </dl>
-            <a class="catalog-additional-items__button button button--limited-size-m" href="#">Заказать</a>
-          </li>
-          <li class="additional-items-list__item">
-            <h3 class="additional-items-list__item-title">Молоко</h3>
-            <dl class="additional-items-list__item-description-list">
-              <dt class="additional-items-list__item-description-term">1&nbsp;литр</dt>
-              <dd class="additional-items-list__item-description-definition">100&nbsp;&#8381;</dd>
-            </dl>
-            <a class="catalog-additional-items__button button button--limited-size-m" href="#">Заказать</a>
-          </li>
-          <li class="additional-items-list__item">
-            <h3 class="additional-items-list__item-title">Витамины</h3>
-            <dl class="additional-items-list__item-description-list">
-              <dt class="additional-items-list__item-description-term">1&nbsp;упаковка (30&nbsp;г)</dt>
-              <dd class="additional-items-list__item-description-definition">300&nbsp;&#8381;</dd>
-            </dl>
-            <a class="catalog-additional-items__button button button--limited-size-m" href="#">Заказать</a>
-          </li>
-        </ul>
-        <div class="promotion">
-          <p class="promotion__text">Закажите все и&nbsp;получите чехол для&nbsp;кота в&nbsp;подарок!</p>
+        <h2 class="catalog-additional-items__title">Дополнительные&nbsp;товары</h2>
+        <div class="catalog-additional-items__wrapper">
+          <ul class="catalog-additional-items__list additional-items-list">
+            <li class="additional-items-list__item">
+              <h3 class="additional-items-list__item-title">Сахарозаменитель</h3>
+              <dl class="additional-items-list__item-description-list">
+                <dt class="additional-items-list__item-description-term">1&nbsp;упаковка (100&nbsp;г)</dt>
+                <dd class="additional-items-list__item-description-definition">200&nbsp;&#8381;</dd>
+              </dl>
+              <a class="catalog-additional-items__button button button--limited-size-m" href="#">Заказать</a>
+            </li>
+            <li class="additional-items-list__item">
+              <h3 class="additional-items-list__item-title">Питьевая вода</h3>
+              <dl class="additional-items-list__item-description-list">
+                <dt class="additional-items-list__item-description-term">5&nbsp;литров</dt>
+                <dd class="additional-items-list__item-description-definition">50&nbsp;&#8381;</dd>
+              </dl>
+              <a class="catalog-additional-items__button button button--limited-size-m" href="#">Заказать</a>
+            </li>
+            <li class="additional-items-list__item">
+              <h3 class="additional-items-list__item-title">Молоко</h3>
+              <dl class="additional-items-list__item-description-list">
+                <dt class="additional-items-list__item-description-term">1&nbsp;литр</dt>
+                <dd class="additional-items-list__item-description-definition">100&nbsp;&#8381;</dd>
+              </dl>
+              <a class="catalog-additional-items__button button button--limited-size-m" href="#">Заказать</a>
+            </li>
+            <li class="additional-items-list__item">
+              <h3 class="additional-items-list__item-title">Витамины</h3>
+              <dl class="additional-items-list__item-description-list">
+                <dt class="additional-items-list__item-description-term">1&nbsp;упаковка (30&nbsp;г)</dt>
+                <dd class="additional-items-list__item-description-definition">300&nbsp;&#8381;</dd>
+              </dl>
+              <a class="catalog-additional-items__button button button--limited-size-m" href="#">Заказать</a>
+            </li>
+          </ul>
+          <div class="promotion">
+            <p class="promotion__text">Закажите все и&nbsp;получите чехол для&nbsp;кота в&nbsp;подарок!</p>
+          </div>
         </div>
       </section>
       <section class="contacts">
