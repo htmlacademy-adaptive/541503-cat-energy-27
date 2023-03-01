@@ -1,0 +1,38 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.socials-list {
+  @include mixin.list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 28px;
+
+  @media (max-width: var.$mobile-width-only) {
+    margin: 0 auto;
+    padding: 22px 0;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 440px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 840px;
+  }
+}
+
+.socials-list__link {
+  display: block;
+
+  color: var.$color-basic-darkgrey;
+}
+
+.socials-list__link:hover,
+.socials-list__link:focus {
+  color: var.$color-basic-green;
+}
+
+.socials-list__link:active {
+  color: rgba(104, 183, 56, 0.3);
+}

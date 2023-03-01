@@ -1,0 +1,61 @@
+@use "../global/variables.scss" as var;
+
+.logo {
+  margin-right: 18px;
+}
+
+.logo--mobile {
+  margin-right: 20px;
+  width: calc(100% - 24px - 20px);
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
+}
+
+.logo__image {
+  margin: 0;
+  width: 34px;
+  height: 38px;
+}
+
+.logo__inscription {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+
+  margin: 0;
+  display: block;
+  width: 101px;
+  height: 18px;
+
+  transform: translateX(-50%);
+}
+
+.logo--tablet {
+  display: none;
+  width: 174px;
+  height: 52px;
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    display: block;
+  }
+}
+
+.logo--desktop {
+  display: none;
+  width: 202px;
+  height: 59px;
+
+  @media (min-width: var.$desktop-width) {
+    display: block;
+  }
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:active {
+  opacity: 0.6;
+}

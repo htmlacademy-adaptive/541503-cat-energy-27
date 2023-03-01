@@ -1,0 +1,33 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.page {
+  height: 100%;
+  background-color: var.$color-basic-white;
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 1920px;
+  min-height: 100%;
+
+  @include mixin.font-main-text;
+  font-style: normal;
+  word-break: break-word;
+
+  background-color: var.$color-basic-white;
+
+  @media (min-width: var.$desktop-width) {
+    grid-template-rows: 1fr auto;
+  }
+}
+
+.page--inner .page__body {
+  @media (min-width: var.$desktop-width) {
+    grid-template-rows: auto 1fr auto;
+  }
+}

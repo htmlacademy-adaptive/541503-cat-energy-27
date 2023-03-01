@@ -1,0 +1,69 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.program-form {
+  padding: 0 0 32px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 0 72px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0 0 82px;
+  }
+}
+
+.program-form__fieldsets-wrapper {
+  padding: 0 0 26px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 67px 75px 70px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0 110px 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.program-form__footer {
+  @media (max-width: var.$mobile-width-only) {
+    padding: 0 20px 21px;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 67px 0 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0 110px;
+  }
+}
+
+.program-form__button {
+  @media (max-width: var.$mobile-width-only) {
+    margin: 0 0 21px;
+  }
+}
+
+.program-form__footnote {
+  @include mixin.font-form-footnote;
+
+  @media (max-width: var.$mobile-width-only) {
+    text-align: center;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 0 64px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 0 84px;
+  }
+}

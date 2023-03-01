@@ -1,0 +1,75 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.catalog-additional-items {
+  padding: 0 0 35px;
+
+  @media (min-width: var.$tablet-width-only) {
+    padding: 0 0 76px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0 0 86px;
+  }
+}
+
+.catalog-additional-items__title {
+  padding: 0;
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 0;
+  width: 100%;
+  word-break: normal;
+
+  @include mixin.font-section-title-catalog;
+  margin: 0 0 36px;
+
+  @media (max-width: var.$mobile-width-only) {
+    padding: 0 0 0 20px;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 80px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 81px;
+  }
+}
+
+.catalog-additional-items__title::before {
+  @media (min-width: var.$tablet-width) {
+    content: "";
+
+    margin: 20px 37px 0 0;
+    flex-shrink: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var.$color-basic-green;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 20px 40px 0 0;
+    width: 70px;
+  }
+}
+
+.catalog-additional-items__title::after {
+  content: "";
+
+  margin: 16px 0 0 21px;
+  flex-shrink: 0;
+  flex-grow: 1;
+  min-width: 53px;
+  height: 2px;
+  background-color: var.$color-basic-green;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 20px 0 0 36px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 20px 0 0 35px;
+  }
+}

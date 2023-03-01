@@ -1,0 +1,75 @@
+@use "../global/variables.scss" as var;
+
+.page-header-toggle {
+  margin: 10px 0 0;
+  padding: 8px 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.page-header__main-nav--opened .page-header-toggle {
+  position: absolute;
+  right: 4px;
+  top: 23px;
+  z-index: 11;
+
+  margin: -8px 0 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.page-header-toggle__burger {
+  display: block;
+  width: 24px;
+  height: 2px;
+
+  background-color: var.$color-basic-black;
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__main-nav--opened .page-header-toggle__burger {
+  width: 25px;
+
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+.page-header-toggle__burger::before {
+  content: "";
+
+  display: block;
+  width: 24px;
+  height: 2px;
+
+  background-color: var.$color-basic-black;
+
+  transform: translate(0, -7px);
+}
+
+.page-header__main-nav--opened .page-header-toggle__burger::before {
+  width: 25px;
+
+  transform: translate(0) rotate(90deg);
+}
+
+.page-header-toggle__burger::after {
+  content: "";
+
+  display: block;
+  width: 24px;
+  height: 2px;
+
+  background-color: var.$color-basic-black;
+
+  transform: translateY(5px);
+}
+
+.page-header__main-nav--opened .page-header-toggle__burger::after {
+  display: none;
+}

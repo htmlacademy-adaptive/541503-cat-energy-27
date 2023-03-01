@@ -1,0 +1,19 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.input-text-box {
+  padding: 0 0 14px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 0 20px;
+  }
+}
+
+.input-text-box__label {
+  max-width: calc(50% - 13px);
+
+  @include mixin.font-input;
+
+  margin: 0 13px 0 0;
+}

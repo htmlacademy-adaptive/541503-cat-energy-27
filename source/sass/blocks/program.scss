@@ -1,0 +1,58 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.program {
+  @media (max-width: var.$mobile-width-only) {
+    border-top: 1px solid var.$color-programs-list-border-grey;
+    padding: 27px 0 0;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    padding: 64px 0 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 74px 0 0;
+  }
+}
+
+.program__title {
+  padding: 0 20px;
+
+  @include mixin.font-title-large;
+
+  @media (max-width: var.$mobile-width-only) {
+    line-height: var.$line-height-desktop-xxl;
+  }
+
+  margin: 0 0 37px;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 54px;
+    padding: 0 67px 0 70px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 56px;
+    padding: 0 110px 0;
+  }
+}
+
+.program__lead {
+  padding: 0 70px 0 20px;
+
+  @include mixin.font-form-lead;
+
+  margin: 0 0 40px;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 66px;
+    padding: 0 370px 0 70px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0 110px 0;
+    width: 570px;
+  }
+}

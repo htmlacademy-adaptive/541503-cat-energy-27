@@ -1,0 +1,24 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.catalog-list {
+  @include mixin.list-reset;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    row-gap: 68px;
+    align-items: end;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 63px;
+  }
+}

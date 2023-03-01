@@ -1,0 +1,38 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.page-header {
+  @media (min-width: var.$desktop-width) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
+  }
+}
+
+.page--inner .page-header {
+  position: relative;
+}
+
+.page-header__main-nav {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (max-width: var.$mobile-width-only) {
+    min-height: 66px;
+  }
+
+  @media (max-width: var.$mobile-width-only) {
+    padding: 10px 0 18px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-top: 53px;
+  }
+}

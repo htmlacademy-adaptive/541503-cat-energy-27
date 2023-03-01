@@ -1,0 +1,15 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.input-number-box:not(:last-child) {
+  margin: 0 0 14px;
+}
+
+.input-number-box__label {
+  max-width: calc(50% - 13px);
+
+  @include mixin.font-input;
+
+  margin: 0 13px 0 0;
+}
