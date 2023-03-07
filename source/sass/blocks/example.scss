@@ -3,9 +3,6 @@
 @use "../global/mixins.scss" as mixin;
 
 .example {
-  display: grid;
-  grid-template-rows: min-content min-content;
-
   @media (max-width: var.$mobile-width-only) {
     padding-top: 25px;
     padding-bottom: 40px;
@@ -23,13 +20,21 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    padding-top: 60px;
+    padding-top: 21px;
     padding-bottom: 75px;
 
+    background-image: linear-gradient(to bottom, var.$color-basic-white 0%, var.$color-basic-white 196px, var.$color-basic-background-grey 196px, var.$color-basic-background-grey 100%);
+  }
+}
+
+.example__wrapper {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  align-items: start;
+
+  @media (min-width: var.$desktop-width) {
     grid-template-columns: 436px 1fr;
     column-gap: 224px;
-
-    background-image: linear-gradient(to bottom, var.$color-basic-white 0%, var.$color-basic-white 196px, var.$color-basic-background-grey 196px, var.$color-basic-background-grey 100%);
   }
 }
 
@@ -40,6 +45,7 @@
 
   @media (min-width: var.$tablet-width) {
     margin: 0 0 63px;
+    padding: 0 0 0 1px;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -65,7 +71,7 @@
   flex-direction: column;
 
   @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
-    margin: 0 0 91px;
+    margin: 0 0 87px;
   }
 
   @media (min-width: var.$tablet-width) {
@@ -85,7 +91,7 @@
   }
 
   @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
-    margin: 0 0 9px;
+    margin: 0 0 14px;
     display: flex;
     flex-direction: column;
     text-align: right;

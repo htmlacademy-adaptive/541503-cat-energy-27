@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: end;
-    padding: 19px 0 25px;
+    padding: 19px 0 24px;
 
     border-bottom: 1px solid var.$color-catalog-border;
   }
@@ -49,14 +49,14 @@
 
 .catalog-item__image-link {
   display: block;
+  width: 100%;
 
   @media (max-width: var.$mobile-width-only) {
-    margin: 0 0 13px;
     padding: 0 36px 2px;
   }
 
   @media (min-width: var.$tablet-width) {
-    margin: 0 0 34px;
+    margin: 0 0 35px;
     padding: 0 81px 0;
   }
 
@@ -100,6 +100,12 @@
   opacity: 0.7;
 }
 
+.catalog-item__image-wrapper {
+  @media (max-width: var.$mobile-width-only) {
+    padding: 10px 0 14px 20px;
+  }
+}
+
 .catalog-item__title-link {
   display: block;
 }
@@ -120,7 +126,7 @@
   width: 76px;
 
   @media (min-width: var.$tablet-width) {
-    margin: 0 auto 21px;
+    margin: 0 auto 12px;
     width: 145px;
 
     text-align: center;
@@ -130,7 +136,7 @@
 .catalog-item__description-list {
   @include mixin.list-reset;
 
-  margin: 0 0 22px;
+  margin: 0 0 23px;
   padding: 0 20px 0 0;
 
   @media (min-width: var.$tablet-width) {
@@ -151,7 +157,7 @@
   align-items: center;
 
   @media (min-width: var.$tablet-width) {
-    padding: 7px 0 9px;
+    padding: 7px 0 8px;
 
     border-bottom: 1px solid var.$color-special-grey;
   }
@@ -197,24 +203,24 @@
     margin: 0 auto 8px;
     padding: 78px 0 0;
 
-    background-image: url("../../img/plus-icon-mobile.svg");
+    background-image: url("../img/plus-icon-mobile.svg");
     background-size: 30px 30px;
     background-position: center 25px;
   }
 
   @media (min-width: var.$tablet-width) {
-    margin: 0 auto 23px;
-    padding: 161px 0 0;
+    margin: 0 auto 9px;
+    padding: 158px 0 0;
 
-    background-image: url("../../img/plus-icon-desktop.svg");
+    background-image: url("../img/plus-icon-desktop.svg");
     background-size: 60px 60px;
-    background-position: center 52px;
+    background-position: center 51px;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 160px 0 0;
+    padding: 155px 0 0;
 
-    background-position: center 51px;
+    background-position: center 48px;
   }
 }
 
@@ -229,6 +235,7 @@
 
 .catalog-item--more .catalog-item__title {
   @media (max-width: var.$mobile-width-only) {
+    margin: 0;
     width: 100%;
 
     text-align: center;

@@ -4,7 +4,7 @@
 @mixin font-main-text {
   margin: 0;
 
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: var.$font-m;
   line-height: var.$line-height-m;
   color: var.$color-special-darkgrey;
@@ -18,23 +18,18 @@
 @mixin font-button {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-ml;
   text-transform: uppercase;
   text-align: center;
   color: var.$color-basic-white;
-
-  @media (min-width: var.$tablet-width) {
-    font-size: var.$font-ll;
-    line-height: var.$line-height-ml;
-  }
 }
 
 @mixin font-site-menu {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-ll;
   line-height: var.$line-height-ml;
   font-weight: var.$medium;
@@ -58,7 +53,7 @@
 @mixin font-promo-text {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-m;
   line-height: var.$line-height-xs;
   text-transform: uppercase;
@@ -76,7 +71,7 @@
 @mixin font-to-catalog-link {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-s;
   text-transform: uppercase;
@@ -89,7 +84,7 @@
 }
 
 @mixin font-advantages-counter {
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-advantages-number;
   line-height: var.$line-height-advantages-number;
   text-align: center;
@@ -99,7 +94,7 @@
 @mixin font-example-term {
   margin: 0;
 
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: var.$font-s;
   line-height: var.$line-height-xxs;
   text-transform: lowercase;
@@ -115,7 +110,7 @@
 @mixin font-example-definition {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-mobile-xl;
   line-height: var.$line-height-l;
   text-transform: uppercase;
@@ -131,7 +126,7 @@
 @mixin font-example-price {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-m;
   line-height: var.$line-height-ml;
   text-transform: uppercase;
@@ -145,7 +140,7 @@
 @mixin font-contacts-lead {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-ml;
   text-transform: uppercase;
@@ -160,21 +155,21 @@
 @mixin font-address {
   margin: 0;
 
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: var.$font-m;
   line-height: var.$line-height-ml;
   font-style: normal;
   color: var.$color-basic-darkgrey;
 
   @media (min-width: var.$tablet-width) {
-    font-size: var.$font-l;
+    font-size: var.$font-ml;
   }
 }
 
 @mixin font-academy-link {
   margin: 0;
 
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-ml;
   color: var.$color-special-darkgrey;
@@ -183,7 +178,7 @@
 @mixin font-catalog-small {
   margin: 0;
 
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: var.$font-s;
   line-height: var.$line-height-s;
   color: var.$color-basic-darkgrey;
@@ -196,13 +191,13 @@
 @mixin font-catalog-additional-item-text {
   margin: 0;
 
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: var.$font-m;
   line-height: var.$line-height-xs;
   color: var.$color-special-darkgrey;
 
   @media (min-width: var.$tablet-width) {
-    font-size: var.$font-l;
+    font-size: var.$font-ml;
     line-height: var.$line-height-ml;
   }
 }
@@ -210,13 +205,13 @@
 @mixin font-promotion {
   margin: 0;
 
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-ml;
   text-align: center;
   color: var.$color-basic-white;
 
-  @media (min-width: var.$tablet-width) and (max-width: $tablet-width-only) {
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
     text-align: start;
   }
 }
@@ -224,7 +219,7 @@
 @mixin font-form-lead {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-m;
   line-height: var.$line-height-m;
   text-transform: uppercase;
@@ -239,7 +234,7 @@
 @mixin font-input {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-m;
   text-transform: uppercase;
@@ -254,7 +249,7 @@
 @mixin font-radio {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-m;
   text-transform: uppercase;
@@ -269,7 +264,7 @@
 @mixin font-checkbox {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-m;
   text-transform: uppercase;
@@ -284,7 +279,7 @@
 @mixin font-form-footnote {
   margin: 0;
 
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: var.$font-m;
   line-height: var.$line-height-s;
   color: var.$color-basic-black;
@@ -297,7 +292,7 @@
 @mixin font-subtitle-main {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-mobile-xl;
   line-height: var.$line-height-mobile-xl;
   font-weight: var.$normal;
@@ -313,7 +308,7 @@
 @mixin font-subtitle-form {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-mobile-xl;
   line-height: var.$line-height-ll;
   font-weight: var.$normal;
@@ -328,7 +323,7 @@
 @mixin font-subtitle-catalog {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-ml;
   font-weight: var.$normal;
@@ -344,7 +339,7 @@
 @mixin font-subtitle-catalog-alter {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-ml;
   line-height: var.$line-height-s;
   font-weight: var.$normal;
@@ -360,7 +355,7 @@
 @mixin font-title-large {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-mobile-xxl;
   line-height: var.$line-height-mobile-xxl;
   font-weight: var.$normal;
@@ -375,9 +370,10 @@
 @mixin font-section-title-catalog {
   margin: 0;
 
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: var.$font-mobile-xl;
   line-height: var.$line-height-l;
+  font-weight: var.$normal;
   color: var.$color-basic-black;
 
   @media (min-width: var.$tablet-width) {

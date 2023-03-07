@@ -3,7 +3,7 @@
 @use "../global/mixins.scss" as mixin;
 
 .program-form {
-  padding: 0 0 32px;
+  padding: 0 0 10px;
 
   @media (min-width: var.$tablet-width) {
     padding: 0 0 72px;
@@ -22,7 +22,7 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 0 110px 70px;
+    padding: 0 110px 69px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
@@ -48,7 +48,7 @@
 
 .program-form__button {
   @media (max-width: var.$mobile-width-only) {
-    margin: 0 0 21px;
+    margin: 0 0 16px;
   }
 }
 
@@ -60,10 +60,10 @@
   }
 
   @media (min-width: var.$tablet-width) {
-    margin: 0 0 0 64px;
+    margin: -8px 0 0 64px;
   }
 
   @media (min-width: var.$desktop-width) {
-    margin: 0 0 0 84px;
+    margin: -7px 0 0 84px;
   }
 }

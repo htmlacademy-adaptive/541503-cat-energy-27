@@ -19,6 +19,12 @@
   @media (min-width: var.$desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
-    row-gap: 63px;
+    row-gap: 54px;
+  }
+}
+
+.catalog-list__item:last-child {
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    margin: 73px 0 0;
   }
 }

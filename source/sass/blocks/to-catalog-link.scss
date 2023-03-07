@@ -18,13 +18,13 @@
   display: block;
   width: 24px;
   height: 12px;
-  background-image: url("../../img/arrow-right-black.svg");
+  background-image: url("../img/arrow-right-black.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 24px 12px;
 
   @media (min-width: var.$tablet-width) {
-    margin: 0 0 0 25px;
+    margin: 0 0 0 27px;
   }
 }
 
@@ -32,7 +32,7 @@
 .to-catalog-link:focus::after {
   width: 32px;
 
-  background-image: url("../../img/arrow-right-black-long.svg");
+  background-image: url("../img/arrow-right-black-long.svg");
   background-size: 32px 12px;
 }
 

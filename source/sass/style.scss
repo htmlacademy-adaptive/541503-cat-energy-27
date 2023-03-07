@@ -7,7 +7,6 @@
 @use "global/global-selectors.scss";
 @use "blocks/page-header.scss";
 @use "blocks/logo.scss";
-@use "blocks/page-header-toggle.scss";
 @use "blocks/site-menu.scss";
 @use "blocks/button.scss";
 @use "blocks/promo.scss";
@@ -39,3 +38,5 @@
 @use "blocks/catalog-list.scss";
 @use "blocks/catalog-item.scss";
 @use "blocks/catalog-additional-items.scss";
+@use "blocks/additional-items-list.scss";
+@use "blocks/promotion.scss";

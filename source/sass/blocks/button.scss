@@ -6,25 +6,51 @@
   display: block;
   width: 100%;
 
-  padding: 7px 20px;
+  padding: 10px 20px;
 
   @include mixin.font-button;
   background-color: var.$color-basic-green;
 
   @media (min-width: var.$tablet-width) {
-    padding: 14px 20px;
+    padding: 10px 20px;
   }
 
   border: none;
 }
 
+.button--promo {
+  @media (max-width: var.$mobile-width-only) {
+    padding: 11px 20px;
+
+    font-size: var.$font-m;
+    line-height: var.$line-height-m;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    padding: 17px 20px;
+    width: 244px;
+
+    font-size: var.$font-ll;
+  }
+}
+
 .button--limited-size-l {
   @media (min-width: var.$tablet-width) {
+    padding: 16px 20px;
     width: 282px;
+
+    font-size: var.$font-ll;
   }
 
   @media (min-width: var.$desktop-width) {
     width: 568px;
+  }
+}
+
+.button--limited-size-m {
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    margin: 0 38px;
+    width: calc(100% - (38px * 2));
   }
 }
 

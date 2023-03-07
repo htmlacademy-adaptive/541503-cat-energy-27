@@ -18,7 +18,7 @@
 
   @include mixin.font-checkbox;
 
-  @media (min-width: var.$tablet-width) {
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width) {
     padding-right: 40px;
   }
 }
@@ -63,9 +63,12 @@
   }
 }
 
-.checkbox-box:hover .checkbox-box__label::before,
-.checkbox-box__checkbox:focus + .checkbox-box__label::before {
+.checkbox-box:hover .checkbox-box__label::before {
   border: 1px solid var.$color-radio-input-hover;
+}
+
+.checkbox-box__checkbox:focus + .checkbox-box__label::before {
+  border: 1px solid var.$color-special-darkgrey;
 }
 
 .checkbox-box__checkbox:disabled + .checkbox-box__label {

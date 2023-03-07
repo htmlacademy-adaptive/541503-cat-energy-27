@@ -18,7 +18,21 @@
 .advantages__title {
   @include mixin.font-title-large;
 
-  margin: 0 0 32px;
+  margin: 0 0 40px;
+
+  @media (max-width: var.$mobile-width-only) {
+    padding: 0 0 0 2px;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 72px;
+    padding: 0 0 0 1px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 71px;
+    padding: 0;
+  }
 }
 
 .advantages__list {
@@ -29,9 +43,29 @@
 
   counter-reset: advantages-counter;
 
+  @media (max-width: var.$mobile-width-only) {
+    padding: 0 0 0 2px;
+  }
+
   @media (min-width: var.$tablet-width) {
+    padding: 0 0 0 1px;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width) {
+    justify-content: start;
+    column-gap: 134px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  @media (min-width: var.$desktop-width) and (max-width: var.$desktop-width) {
+    justify-content: start;
+    column-gap: 75px;
   }
 }
 
@@ -54,6 +88,19 @@
 
   @media (min-width: var.$desktop-width) {
     margin: 0 0 66px;
+  }
+}
+
+.advantages__item:last-child {
+  @media (min-width: var.$desktop-width) {
+    width: 245px;
+  }
+}
+
+.advantages__item:last-child,
+.advantages__item:nth-last-of-type(2) {
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    margin: 0 0 93px;
   }
 }
 
@@ -93,22 +140,22 @@
 }
 
 .advantages__decor--leaf {
-  background-image: url("../../img/leaf.svg");
+  background-image: url("../img/leaf.svg");
   background-size: 25px 28px;
 }
 
 .advantages__decor--boiling-water {
-  background-image: url("../../img/boiling-water.svg");
+  background-image: url("../img/boiling-water.svg");
   background-size: 26px 29px;
 }
 
 .advantages__decor--cutlery {
-  background-image: url("../../img/cutlery.svg");
+  background-image: url("../img/cutlery.svg");
   background-size: 25px 30px;
 }
 
 .advantages__decor--clock {
-  background-image: url("../../img/clock.svg");
+  background-image: url("../img/clock.svg");
   background-size: 26px 31px;
 }
 

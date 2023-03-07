@@ -2,7 +2,7 @@
 
 mainNav.classList.remove('page-header__main-nav--opened');
 
-const pageHeaderToggle = document.querySelector('.page-header-toggle');
+const pageHeaderToggle = document.querySelector('.page-header__toggle');
 
 pageHeaderToggle.onclick = function () {
   if (mainNav.classList.contains('page-header__main-nav--opened')) {

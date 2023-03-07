@@ -1,0 +1,94 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.additional-items-list {
+  @include mixin.list-reset;
+
+  @media (max-width: var.$mobile-width-only) {
+    padding: 0 0 34px;
+
+    border-top: 1px solid var.$color-special-grey;
+  }
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    border: 1px solid var.$color-special-grey;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    border-top: 1px solid var.$color-special-grey;
+  }
+}
+
+.additional-items-list__item {
+  padding: 13px 0 19px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 26px 0 28px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 15px 0 16px;
+    display: grid;
+    grid-template-columns: 1fr 244px;
+    column-gap: 40px;
+    align-items: center;
+  }
+
+  border-bottom: 1px solid var.$color-special-grey;
+}
+
+.additional-items-list__item-text-content {
+  column-gap: 40px;
+
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    margin: 0 0 24px;
+    padding: 0 38px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 285px;
+    column-gap: 40px;
+    align-items: center;
+  }
+}
+
+.additional-items-list__item-title {
+  @include mixin.font-subtitle-catalog-alter;
+
+  @media (max-width: var.$mobile-width-only) {
+    margin: 0 0 13px;
+  }
+}
+
+.additional-items-list__item-description-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 49px;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mixin.font-catalog-additional-item-text;
+
+  @media (max-width: var.$mobile-width-only) {
+    margin: 0 0 14px;
+  }
+}
+
+.additional-items-list__item:first-child .additional-items-list__item-description-list {
+  column-gap: 55px;
+}
+
+.additional-items-list__item-description-term {
+  flex-grow: 1;
+}
+
+.additional-items-list__item-description-definition {
+  margin: 0;
+}

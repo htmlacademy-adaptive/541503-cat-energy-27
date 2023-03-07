@@ -11,16 +11,16 @@
   border: none;
 
   @media (max-width: var.$mobile-width-only) {
-    padding: 0 20px 10px;
+    padding: 0 20px 23px;
   }
 
   @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
-    padding: 0 0 58px;
+    padding: 0 0 72px;
   }
 }
 
 .program-form-group--radio {
-  padding: 22px 20px 6px;
+  padding: 22px 20px 5px;
 
   @media (max-width: var.$mobile-width-only) {
     border-top: 1px solid var.$color-programs-list-border-grey;
@@ -28,14 +28,14 @@
   }
 
   @media (min-width: var.$tablet-width) {
-    padding: 25px 28px 12px;
+    padding: 24px 28px 11px;
 
     border: 1px solid var.$color-input;
   }
 }
 
 .program-form-group--contacts {
-  padding: 0 0 10px;
+  padding: 0 0 8px;
 
   @media (min-width: var.$tablet-width) {
     padding: 0 0 45px;
@@ -54,12 +54,12 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 0 0 67px;
+    padding: 0 0 68px;
   }
 }
 
 .program-form-group--checkboxes {
-  padding: 0 0 22px;
+  padding: 0 0 19px;
 
   @media (min-width: var.$desktop-width) {
     padding: 0 0 29px;
@@ -90,15 +90,15 @@
   @media (min-width: var.$tablet-width) {
     content: "";
 
-    margin: 20px 39px 0 0;
+    margin: 22px 39px 0 0;
     flex-shrink: 0;
-    width: 30px;
+    min-width: 30px;
     height: 2px;
     background-color: var.$color-basic-green;
   }
 
   @media (min-width: var.$desktop-width) {
-    margin: 20px 40px 0 0;
+    margin: 22px 40px 0 0;
     width: 70px;
   }
 }
@@ -114,19 +114,23 @@
   background-color: var.$color-basic-green;
 
   @media (min-width: var.$tablet-width) {
-    margin: 20px 0 0 42px;
+    margin: 22px 0 0 42px;
   }
 
   @media (min-width: var.$desktop-width) {
-    margin: 20px 0 0 40px;
+    margin: 22px 0 0 40px;
   }
 }
 
 .program-form-group--textarea .program-form-group__title {
-  margin: 0 0 38px;
+  margin: 0 0 39px;
 
   @media (min-width: var.$tablet-width) {
     margin: 0 0 76px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 75px;
   }
 }
 
@@ -134,11 +138,11 @@
   margin: 16px 0 0 22px;
 
   @media (min-width: var.$tablet-width) {
-    margin: 20px 0 0 38px;
+    margin: 22px 0 0 38px;
   }
 
   @media (min-width: var.$desktop-width) {
-    margin: 20px 0 0 40px;
+    margin: 22px 0 0 40px;
   }
 }
 
@@ -152,7 +156,7 @@
 
 .program-form-group--checkboxes .program-form-group__title::before {
   @media (min-width: var.$tablet-width) {
-    margin: 20px 40px 0 0;
+    margin: 22px 40px 0 0;
   }
 }
 
@@ -160,11 +164,11 @@
   margin: 16px 0 0 23px;
 
   @media (min-width: var.$tablet-width) {
-    margin: 20px 0 0 41px;
+    margin: 22px 0 0 41px;
   }
 
   @media (min-width: var.$desktop-width) {
-    margin: 20px 0 0 40px;
+    margin: 22px 0 0 40px;
   }
 }
 
@@ -187,14 +191,16 @@
   padding: 0 20px;
 
   @media (min-width: var.$tablet-width) {
-    padding: 0 67px 0 70px;
+    padding: 0 67px 3px 70px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 57px;
   }
 
   @media (min-width: var.$desktop-width) {
     padding: 0 110px;
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
   }
 }
 
