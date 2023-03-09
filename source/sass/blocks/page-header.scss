@@ -3,6 +3,10 @@
 @use "../global/mixins.scss" as mixin;
 
 .page-header {
+  position: relative;
+}
+
+.page-header--main-page {
   @media (min-width: var.$desktop-width) {
     position: absolute;
     left: 0;
@@ -10,10 +14,6 @@
     top: 0;
     z-index: 5;
   }
-}
-
-.page--inner .page-header {
-  position: relative;
 }
 
 .page-header__main-nav {
@@ -25,14 +25,196 @@
   align-items: flex-start;
 
   @media (max-width: var.$mobile-width-only) {
-    min-height: 66px;
-  }
-
-  @media (max-width: var.$mobile-width-only) {
-    padding: 10px 0 18px;
+    padding: 10px 0 17px;
+    min-height: 65px;
   }
 
   @media (min-width: var.$desktop-width) {
     padding-top: 53px;
+  }
+}
+
+.page-header__logo {
+  margin-right: 0 20px 0 0;
+}
+
+.page-header__toggle {
+  margin: 12px 0 0;
+  padding: 8px 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__main-nav--opened .page-header__toggle {
+  position: absolute;
+  right: 2px;
+  top: 28px;
+  z-index: 11;
+
+  margin: -8px 0 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.page-header__burger {
+  display: block;
+  width: 24px;
+  height: 2px;
+
+  background-color: var.$color-basic-black;
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__main-nav--opened .page-header__burger {
+  width: 25px;
+
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+.page-header__burger::before {
+  content: "";
+
+  display: block;
+  width: 24px;
+  height: 2px;
+
+  background-color: var.$color-basic-black;
+
+  transform: translate(0, -8px);
+}
+
+.page-header__main-nav--opened .page-header__burger::before {
+  width: 25px;
+
+  transform: translate(0, 0) rotate(90deg);
+}
+
+.page-header__burger::after {
+  content: "";
+
+  display: block;
+  width: 24px;
+  height: 2px;
+
+  background-color: var.$color-basic-black;
+
+  transform: translateY(6px);
+}
+
+.page-header__main-nav--opened .page-header__burger::after {
+  display: none;
+}
+
+.page-header__site-menu {
+  margin-left: auto;
+
+  @include mixin.list-reset;
+
+  @media (max-width: var.$mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin: 18px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 35px;
+    max-width: 440px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 17px 0 0;
+    gap: 34px;
+    max-width: 610px;
+  }
+}
+
+.page-header__main-nav--opened .page-header__site-menu {
+  @media (max-width: var.$mobile-width-only) {
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    top: 65px;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.page-header__site-menu-link {
+  @include mixin.font-site-menu;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 7px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 5px 0;
+  }
+}
+
+.page-header--main-page .page-header__site-menu-link {
+  @media (min-width: var.$desktop-width) {
+    color: var.$color-basic-white;
+  }
+}
+
+.page-header__main-nav--opened .page-header__site-menu-link {
+  @media (max-width: var.$mobile-width-only) {
+    padding: 22px 0 23px;
+    display: block;
+    width: 100%;
+
+    background-color: var.$color-basic-white;
+    border-top: 1px solid var.$color-menu-border;
+  }
+}
+
+.page-header__site-menu-link:hover,
+.page-header__site-menu-link:focus {
+  opacity: 0.6;
+}
+
+.page-header__main-nav--opened .page-header__site-menu-link:hover,
+.page-header__main-nav--opened .page-header__site-menu-link:focus {
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.page-header__site-menu-link:active {
+  opacity: 0.3;
+}
+
+.page-header__main-nav--opened .page-header__site-menu-link:active {
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.page-header__site-menu-link--current {
+  @media (min-width: var.$tablet-width) {
+    border-bottom: 2px solid var.$color-basic-green;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    border-bottom: 2px solid var.$color-basic-green;
+  }
+}
+
+.page-header--main-page .page-header__site-menu-link--current {
+  @media (min-width: var.$desktop-width) {
+    border-color: var.$color-basic-white;
   }
 }

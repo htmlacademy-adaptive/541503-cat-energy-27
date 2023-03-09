@@ -19,7 +19,7 @@
 
 .programs-list__item {
   position: relative;
-  padding: 24px 20px 18px;
+  padding: 24px 20px 17px;
 
   background-color: var.$color-basic-grey;
 
@@ -28,7 +28,7 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 47px 61px 55px 52px;
+    padding: 6px 61px 55px 52px;
   }
 }
 
@@ -38,12 +38,16 @@
   flex-wrap: wrap;
   align-items: center;
 
+  @media (max-width: var.$mobile-width-only) {
+    padding: 0 0 0 3px;
+  }
+
   @media (min-width: var.$tablet-width) {
     margin: 0 0 24px;
   }
 
   @media (min-width: var.$desktop-width) {
-    margin: 40px;
+    margin: 40px 0;
   }
 }
 
@@ -75,11 +79,15 @@
   border-radius: 50%;
 }
 
-.programs-list__decor-image--slim {
+.programs-list__decor::after {
+  content: "";
+
   position: absolute;
   background-repeat: no-repeat;
   background-position: center center;
+}
 
+.programs-list__decor--slim::after {
   @media (max-width: var.$mobile-width-only) {
     left: 7px;
     top: -3px;
@@ -87,7 +95,7 @@
     width: 36px;
     height: 50px;
 
-    background-image: url("../../img/cat-slim-mobile.svg");
+    background-image: url("../img/cat-slim-mobile.svg");
     background-size: 36px 50px;
   }
 
@@ -98,7 +106,7 @@
     width: 140px;
     height: 194px;
 
-    background-image: url("../../img/cat-slim-tablet.svg");
+    background-image: url("../img/cat-slim-tablet.svg");
     background-size: 140px 194px;
   }
 
@@ -109,16 +117,12 @@
     width: 70px;
     height: 97px;
 
-    background-image: url("../../img/cat-slim-desktop.svg");
+    background-image: url("../img/cat-slim-desktop.svg");
     background-size: 70px 97px;
   }
 }
 
-.programs-list__decor-image--pro {
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center center;
-
+.programs-list__decor--pro::after {
   @media (max-width: var.$mobile-width-only) {
     left: -9px;
     top: 11px;
@@ -126,7 +130,7 @@
     width: 67px;
     height: 28px;
 
-    background-image: url("../../img/cat-strong-mobile.svg");
+    background-image: url("../img/cat-strong-mobile.svg");
     background-size: 67px 28px;
   }
 
@@ -137,7 +141,7 @@
     width: 268px;
     height: 112px;
 
-    background-image: url("../../img/cat-strong-tablet.svg");
+    background-image: url("../img/cat-strong-tablet.svg");
     background-size: 268px 112px;
   }
 
@@ -148,7 +152,7 @@
     width: 134px;
     height: 56px;
 
-    background-image: url("../../img/cat-strong-desktop.svg");
+    background-image: url("../img/cat-strong-desktop.svg");
     background-size: 134px 56px;
   }
 }

@@ -37,9 +37,3 @@
   border: 1px solid var.$color-input;
   outline: none;
 }
-
-/*Для отображения ошибки соответствующему элементу input добавить класс "is-error"*/
-.textarea.is-error {
-  border: 1px solid var.$color-status-error;
-  outline: 1px solid var.$color-status-error;
-}

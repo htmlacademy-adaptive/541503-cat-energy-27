@@ -6,26 +6,58 @@
   display: block;
   width: 100%;
 
-  padding: 7px 20px;
+  padding: 10px 20px;
 
   @include mixin.font-button;
   background-color: var.$color-basic-green;
 
-  @media (min-width: var.$tablet-width) {
-    padding: 14px 20px;
+  border: none;
+}
+
+.button--promo {
+  @media (max-width: var.$mobile-width-only) {
+    padding: 11px 20px;
+
+    font-size: var.$font-m;
+    line-height: var.$line-height-m;
   }
 
-  border: none;
+  @media (min-width: var.$tablet-width) {
+    padding: 17px 20px;
+    width: 244px;
+
+    font-size: var.$font-ll;
+  }
 }
 
 .button--limited-size-l {
   @media (min-width: var.$tablet-width) {
+    padding: 16px 20px;
     width: 282px;
+
+    font-size: var.$font-ll;
   }
 
   @media (min-width: var.$desktop-width) {
     width: 568px;
   }
+}
+
+.button--limited-size-m {
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width-only) {
+    margin: 0 38px;
+    width: calc(100% - (38px * 2));
+  }
+}
+
+.button.button--more {
+  margin: 0;
+  padding: 10px 20px;
+  width: 100%;
+
+  color: var.$color-special-darkgrey;
+
+  background-color: var.$color-basic-grey;
 }
 
 .button:hover,
@@ -38,30 +70,20 @@
   color: rgba(255, 255, 255, 0.3);
 }
 
-/*Добавить соответствующей кнопке класс "disabled" для активации стилей неактивной кнопки*/
-.button.disabled {
+.button:active.button--disabled {
+  color: var.$color-basic-white;
+}
+
+/*Добавить соответствующей кнопке с классом button класс "button--disabled" для активации стилей неактивной кнопки*/
+.button--disabled {
   background-color: var.$color-basic-green-hover;
 
   opacity: 0.5;
 }
 
-.button--more {
-  padding: 10px 20px;
-
-  color: var.$color-special-darkgrey;
-
-  background-color: var.$color-basic-grey;
-}
-
 .button--more:hover,
 .button--more:focus {
   background-color: var.$color-catalog-border;
-}
-
-.button--more.disabled {
-  background-color: var.$color-basic-grey;
-
-  opacity: 0.5;
 }
 
 .button--more:active {
@@ -70,4 +92,18 @@
   background-color: var.$color-catalog-border;
 
   opacity: 0.3;
+}
+
+.button--more.button--disabled {
+  padding: 10px 20px;
+
+  color: var.$color-special-darkgrey;
+
+  background-color: var.$color-basic-grey;
+
+  opacity: 0.5;
+}
+
+.button--more:active.button--disabled {
+  color: var.$color-special-darkgrey;
 }

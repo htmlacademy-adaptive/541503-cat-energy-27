@@ -28,6 +28,14 @@
   clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 }
 
+.example-slider__image {
+  max-width: 280px;
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 560px;
+  }
+}
+
 .example-slider__button {
   position: absolute;
   left: 50%;

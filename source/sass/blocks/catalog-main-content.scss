@@ -14,13 +14,13 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 74px 110px 75px;
+    padding: 76px 110px 75px;
   }
 }
 
 .catalog-main-content__header {
   @media (max-width: var.$mobile-width-only) {
-    padding: 0 0 41px;
+    padding: 0 0 40px;
 
     border-bottom: 1px solid var.$color-catalog-border;
   }
@@ -36,10 +36,10 @@
   }
 
   @media (min-width: var.$tablet-width) {
-    padding: 0 0 90px;
+    padding: 0 0 84px;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 0 0 85px;
+    padding: 0 0 81px;
   }
 }

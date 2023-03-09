@@ -10,9 +10,8 @@
 .page__body {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  margin: 0 auto;
+  margin: 0;
   min-width: 320px;
-  max-width: 1920px;
   min-height: 100%;
 
   @include mixin.font-main-text;

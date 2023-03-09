@@ -3,13 +3,13 @@
 @use "../global/mixins.scss" as mixin;
 
 .input-number {
-  padding: 14px 20px 13px;
+  padding: 13px 20px 12px;
   flex-grow: 1;
 
   @include mixin.font-input;
 
   @media (min-width: var.$tablet-width) {
-    padding: 11px 20px;
+    padding: 10px 20px;
   }
 
   border: 1px solid var.$color-input;
@@ -29,7 +29,7 @@
   border: 1px solid var.$color-input;
 }
 
-/*Для отображения ошибки соответствующему элементу input добавить класс "is-error"*/
-.input-number.is-error {
+/*Для отображения ошибки соответствующему элементу input добавить класс "input-number--is-error"*/
+.input-number:required.input-number--is-error {
   border: 1px solid var.$color-status-error;
 }

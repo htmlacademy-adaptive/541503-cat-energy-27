@@ -4,6 +4,9 @@
 
 .input-tel-box {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 14px;
 
   padding: 0 0 14px;
 

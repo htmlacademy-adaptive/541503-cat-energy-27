@@ -4,6 +4,11 @@
 
 .checkbox-box {
   padding: 0 0 13px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 13px;
+  align-items: center;
 
   @media (min-width: var.$tablet-width) {
     padding: 0 0 32px;
@@ -18,7 +23,7 @@
 
   @include mixin.font-checkbox;
 
-  @media (min-width: var.$tablet-width) {
+  @media (min-width: var.$tablet-width) and (max-width: var.$tablet-width) {
     padding-right: 40px;
   }
 }
@@ -63,9 +68,12 @@
   }
 }
 
-.checkbox-box:hover .checkbox-box__label::before,
-.checkbox-box__checkbox:focus + .checkbox-box__label::before {
+.checkbox-box:hover .checkbox-box__label::before {
   border: 1px solid var.$color-radio-input-hover;
+}
+
+.checkbox-box__checkbox:focus + .checkbox-box__label::before {
+  border: 1px solid var.$color-special-darkgrey;
 }
 
 .checkbox-box__checkbox:disabled + .checkbox-box__label {
