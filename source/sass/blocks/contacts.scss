@@ -38,7 +38,7 @@
   }
 }
 
-.page--inner .contacts__text {
+.contacts__text--page-inner {
   @media (max-width: var.$tablet-width-only) {
     background-color: var.$color-basic-grey;
   }

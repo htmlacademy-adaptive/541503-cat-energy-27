@@ -46,7 +46,6 @@
   @media (min-width: var.$desktop-width) {
     font-size: var.$font-ll;
     line-height: var.$line-height-lll;
-    color: var.$color-basic-white;
   }
 }
 
@@ -242,7 +241,7 @@
 
   @media (min-width: var.$tablet-width) {
     font-size: var.$font-ll;
-    line-height: var.$line-height-ll;
+    line-height: var.$line-height-lll;
   }
 }
 

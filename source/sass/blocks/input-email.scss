@@ -9,7 +9,7 @@
   @include mixin.font-input;
 
   @media (min-width: var.$tablet-width) {
-    padding: 12px 60px 12px 20px;
+    padding: 10px 60px 10px 20px;
   }
 
   border: 1px solid var.$color-input;
@@ -30,8 +30,8 @@
   outline: none;
 }
 
-/*Для отображения ошибки соответствующему элементу input добавить класс "is-error"*/
-.input-email.is-error {
+/*Для отображения ошибки соответствующему элементу input добавить класс "input-email--is-error"*/
+.input-email--is-error {
   border: 1px solid var.$color-status-error;
   outline: 1px solid var.$color-status-error;
 }

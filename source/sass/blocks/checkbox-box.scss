@@ -4,6 +4,11 @@
 
 .checkbox-box {
   padding: 0 0 13px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 13px;
+  align-items: center;
 
   @media (min-width: var.$tablet-width) {
     padding: 0 0 32px;

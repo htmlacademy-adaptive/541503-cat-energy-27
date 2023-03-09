@@ -9,7 +9,7 @@
   @include mixin.font-input;
 
   @media (min-width: var.$tablet-width) {
-    padding: 12px 20px;
+    padding: 10px 20px;
   }
 
   border: 1px solid var.$color-input;
@@ -29,7 +29,7 @@
   border: 1px solid var.$color-input;
 }
 
-/*Для отображения ошибки соответствующему элементу input добавить класс "is-error"*/
-.input-number:required.is-error {
+/*Для отображения ошибки соответствующему элементу input добавить класс "input-number--is-error"*/
+.input-number:required.input-number--is-error {
   border: 1px solid var.$color-status-error;
 }

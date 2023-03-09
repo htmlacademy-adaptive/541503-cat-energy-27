@@ -20,7 +20,7 @@
     <title>HTML Academy: Кэт энерджи, главная страница</title>
   </head>
   <body class="page__body">
-    <header class="page-header container" id="header">
+    <header class="page-header page-header--main-page container" id="header">
       <nav class="page-header__main-nav page-header__main-nav--opened">
         <a class="page-header__logo logo" href="index.html">
           <picture>
@@ -34,15 +34,15 @@
           <span class="page-header__burger"></span>
           <span class="visually-hidden">Открыть/закрыть меню сайта</span>
         </button>
-        <ul class="page-header__site-menu site-menu">
-          <li class="site-menu__item">
-            <a class="site-menu__link site-menu__link--current" href="index.html">Главная</a>
+        <ul class="page-header__site-menu">
+          <li class="page-header__site-menu-item">
+            <a class="page-header__site-menu-link page-header__site-menu-link--current" href="index.html">Главная</a>
           </li>
-          <li class="site-menu__item">
-            <a class="site-menu__link" href="catalog.html">Каталог продукции</a>
+          <li class="page-header__site-menu-item">
+            <a class="page-header__site-menu-link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-menu__item">
-            <a class="site-menu__link" href="form.html">Подбор программы</a>
+          <li class="page-header__site-menu-item">
+            <a class="page-header__site-menu-link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -50,18 +50,20 @@
     <main>
       <section class="promo">
         <div class="promo__main-content-wrapper">
-          <h1 class="promo__title">Функциональное питание для котов</h1>
-          <h2 class="visually-hidden">Промо-блок</h2>
-          <p class="promo__text">Занялся собой? Займись котом!</p>
-          <picture>
-            <source type="image/webp" media=" (min-width: 1440px) " srcset="img/promo-feed-desktop.webp 1x, img/promo-feed-desktop@2x.webp 2x">
-            <source type="image/webp" media=" (min-width: 768px) " srcset="img/promo-feed-tablet.webp 1x, img/promo-feed-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/promo-feed-mobile.webp 1x, img/promo-feed-mobile@2x.webp 2x">
-            <source media=" (min-width: 1440px) " srcset="img/promo-feed-desktop.png 1x, img/promo-feed-desktop@2x.png 2x">
-            <source media=" (min-width: 768px) " srcset="img/promo-feed-tablet.png 1x, img/promo-feed-tablet@2x.png 2x">
-            <img class="promo__image" src="img/promo-feed-mobile.png" srcset="img/promo-feed-mobile@2x.png 2x" width="280" height="270" alt="Бумажный стакан с функциональным кормом cat energy со вкусом курицы.">
-          </picture>
-          <a class="promo__button button button--promo" href="#">Подобрать программу</a>
+          <div class="promo__text-content">
+            <h1 class="promo__title">Функциональное питание для котов</h1>
+            <h2 class="visually-hidden">Промо-блок</h2>
+            <p class="promo__text">Занялся собой? Займись котом!</p>
+            <picture>
+              <source type="image/webp" media=" (min-width: 1440px) " srcset="img/promo-feed-desktop.webp 1x, img/promo-feed-desktop@2x.webp 2x">
+              <source type="image/webp" media=" (min-width: 768px) " srcset="img/promo-feed-tablet.webp 1x, img/promo-feed-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/promo-feed-mobile.webp 1x, img/promo-feed-mobile@2x.webp 2x">
+              <source media=" (min-width: 1440px) " srcset="img/promo-feed-desktop.png 1x, img/promo-feed-desktop@2x.png 2x">
+              <source media=" (min-width: 768px) " srcset="img/promo-feed-tablet.png 1x, img/promo-feed-tablet@2x.png 2x">
+              <img class="promo__image" src="img/promo-feed-mobile.png" srcset="img/promo-feed-mobile@2x.png 2x" width="280" height="270" alt="Бумажный стакан с функциональным кормом cat energy со вкусом курицы.">
+            </picture>
+            <a class="promo__button button button--promo" href="form.html">Подобрать программу</a>
+          </div>
         </div>
         <div class="promo__decor-background"></div>
       </section>
@@ -137,7 +139,7 @@
                 <source type="image/webp" media=" (min-width: 768px) " srcset="img/fat-cat-desktop.webp 1x, img/fat-cat-desktop@2x.webp 2x">
                 <source type="image/webp" srcset="img/fat-cat-mobile.webp 1x, img/fat-cat-mobile@2x.webp 2x">
                 <source media=" (min-width: 768px) " srcset="img/fat-cat-desktop.png 1x, img/fat-cat-desktop@2x.png 2x">
-                <img src="img/fat-cat-mobile.png" srcset="img/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="Бумажный стакан с функциональным кормом cat energy со вкусом курицы.">
+                <img class="example-slider__image example-slider__image--before" src="img/fat-cat-mobile.png" srcset="img/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="Бумажный стакан с функциональным кормом cat energy со вкусом курицы.">
               </picture>
             </div>
             <div class="example-slider__after">
@@ -145,7 +147,7 @@
                 <source type="image/webp" media=" (min-width: 768px) " srcset="img/thin-cat-desktop.webp 1x, img/thin-cat-desktop@2x.webp 2x">
                 <source type="image/webp" srcset="img/thin-cat-mobile.webp 1x, img/thin-cat-mobile@2x.webp 2x">
                 <source media=" (min-width: 768px) " srcset="img/thin-cat-desktop.png 1x, img/thin-cat-desktop@2x.png 2x">
-                <img src="img/thin-cat-mobile.png" srcset="img/thin-cat-mobile@2x.png 2x" width="280" height="256" alt="Бумажный стакан с функциональным кормом cat energy со вкусом курицы.">
+                <img class="example-slider__image example-slider__image--after" src="img/thin-cat-mobile.png" srcset="img/thin-cat-mobile@2x.png 2x" width="280" height="256" alt="Бумажный стакан с функциональным кормом cat energy со вкусом курицы.">
               </picture>
             </div>
             <button class="example-slider__button" type="button">

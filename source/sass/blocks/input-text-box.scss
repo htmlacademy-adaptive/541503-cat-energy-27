@@ -4,6 +4,9 @@
 
 .input-text-box {
   padding: 0 0 14px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 14px;
 
   @media (min-width: var.$tablet-width) {
     padding: 0 0 20px;
